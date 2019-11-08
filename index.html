@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    table,td,th{
+      margin-left: 200px;
+      /* border:1px solid black; */
+      border: 1px solid black;
+  border-collapse: collapse;
+  margin-top: 30px;
+    }
+    th:nth-of-type(1){
+      padding: 10px;
+      width:60px;
+    }
+    th:nth-of-type(2){
+      padding: 10px;
+      width:50px;
+    }
+    th:nth-of-type(3){
+      padding: 10px;
+      width:400px;
+    }
+    th:nth-of-type(4){
+      padding: 10px;
+      width:400px;
+    }
+   #btn{
+     margin-left: 200px;
+     margin-top: 10px;
+     padding: 10px;
+     background-color:steelblue;
+     color:wheat;
+     border:1px solid cadetblue;
+   } 
+   #submit{
+     margin-left: 300px;
+     margin-top: 30px;
+     padding: 10px;
+     width:150px;
+     background-color:steelblue;
+     color:wheat;
+     border:1px solid cadetblue;
+   }
+   #edit{
+     margin-left: 300px;
+     margin-top: 30px;
+     padding: 10px;
+     width:150px;
+     background-color:steelblue;
+     color:wheat;
+     border:1px solid cadetblue;
+   }
+   tbody{
+     text-align: center;
+   }
+
+   th{
+     background-color: slategrey;
+   }
+    table tr:nth-child(even) {
+    background-color: #eee;
+    }
+    table tr:nth-child(odd) {
+    background-color: #fff;
+    }
+    #getPosts{
+      margin-left: 600px;
+      margin-top: 100px;
+    }
+    #add-data{
+      margin-left: 290px;
+      margin-top: 100px;
+      width:800px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+
+    #Edit-data{
+      margin-left: 290px;
+      margin-top: 100px;
+      width:800px;
+      padding: 20px;
+      border: 1px solid black;
+    }
+    #addData{
+      margin-left: 300px;
+    }
+    #editData{
+      margin-left: 300px;
+    }
+    #userid{
+      padding: 10px 0px 10px 10px;
+      width:60px;
+      margin-left: 10px;
+      /* margin-left:-130px; */
+      }
+      #id2{
+      padding: 10px 0px 10px 10px;
+      width:60px;
+      margin-left: 35px;
+      margin-bottom: 10px;
+      }
+      #userid2{
+      padding: 10px 0px 10px 10px;
+      width:60px;
+      margin-left: 10px;
+      }
+      #lab0{
+      padding: 10px;
+      font-size: 20px;
+      margin-left: 230px;
+    }
+    #lab1{
+      padding: 10px;
+      font-size: 20px;
+      margin-left: 220px;
+    }
+    #lab2{
+      font-size: 20px;
+      padding: 0px;
+      margin-left: 240px;
+    }
+    #lab3{
+      font-size: 20px;
+      padding: 10px;
+      margin-top: 100px;
+      margin-left: 243px;
+    }
+    #title1{
+      width:300px;
+      padding: 10px;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    #body1{
+      width:300px;
+      padding: 10px;
+      margin-top: 20px;
+      margin-left: -7px;
+    }
+
+    #title2{
+      width:300px;
+      padding: 10px;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
+    #body2{
+      width:300px;
+      padding: 10px;
+      margin-top: 20px;
+     
+    }
+    </style>
+</head>
+<body>
+  <section id="Get-Posts">
+    <h1 id="getPosts">Get Posts</h1>
+  <button id="btn">Refresh</button>
+ <table style="border:1">
+   <thead>
+     <th>userId</th>
+     <th>id</th>
+     <th>title</th>
+     <th>body</th>
+  </thead>
+  <tbody></tbody>
+  </table>
+  </section>
+
+ <section id="add-data">
+   <h1 id="addData">Add Data</h1>
+  <label for="userid" id="lab1">userId: </label><input type="text" id="userid"><br>
+  <label for="title1" id="lab2">title: </label><input type="text" id="title1"><br>
+  <label for="body1" id="lab3">body : </label><input  type="text" id="body1"><br>
+   <button id="submit">Posts</button> <span id="spann"></span>
+ </section>
+
+ <section id="Edit-data">
+    <h1 id="editData">Edit Data</h1>
+    <label for="id" id="lab0">id : </label><input  type="text" id="id2"><br>
+   <label for="userid" id="lab1">userId : </label><input type="text" id="userid2"><br>
+   <label for="title1" id="lab2">title : </label><input type="text" id="title2"><br>
+   <label for="body1" id="lab3">body : </label><input  type="text" id="body2"><br>
+    <button id="edit">EditPost</button> <span id="spann2"></span>
+  </section>
+ 
+
+</body>
+
+<script>
+    
+        // arr=[],fetch('https://jsonplaceholder.typicode.com/posts')
+        //   .then(response => response.json())
+        //   .then(json=>{for(let i=0;i<json.length;i++){arr.push(json[i].title)}})
+        // console.log(arr);
+
+        // let table =document.createElement('table');
+        // let tr=table.insertRow(0);
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //       var body = document.getElementsByTagName("body")[0];
+  //         var tbl = document.createElement("table");
+  //         tbl.border = '1';
+  //         var tblBody = document.createElement("tbody");
+  //         var tablehead = document.createElement("thead");
+  //        fetch('https://jsonplaceholder.typicode.com/posts')
+  //         .then(response => response.json())
+  //         .then(json=>{
+  //           // let table =document.createElement('table');
+  //           // let tablebody =document.createElement('tbody');
+  //           // // let tr=document.createElement('tr');
+  //           // // let td=document.createElement('td');
+  //  // {    let tr=table.insertRow(i);
+  //         //   var td1 = tr.insertCell();
+  //         //     var td2 = tr.insertCell();
+  //         //     var td3 = tr.insertCell();
+  //         //     var td4 = tr.insertCell();
+  //         // td1.innerHTML="bcbkjzxn";
+            
+  //         for(let n=0;n<json.length;n++){
+         
+  //           for (var j = 0; j <= n; j++) {
+       
+  //             var row = document.createElement("tr");
+  //           }
+  //           var head1 = document.createElement("th");
+  //           var head2 = document.createElement("th");
+  //           var head3 = document.createElement("th");
+  //           var head4 = document.createElement("th");
+  //           var cell1 = document.createElement("td");
+  //           var cell2 = document.createElement("td");
+  //           var cell3 = document.createElement("td");
+  //           var cell4 = document.createElement("td");
+  //           cell1.width='10';
+  //           cell2.width='10';
+  //           cell3.width='200';
+  //           cell4.width='600';
+  //           var cellText1 = document.createTextNode(json[n].userId);
+  //           var cellText2 = document.createTextNode(json[n].id);
+  //           var cellText3 = document.createTextNode(json[n].title);
+  //           var cellText4 = document.createTextNode(json[n].body);
+  //           var headtext1=document.createTextNode("User Id"+"id"+"title"+"body");
+  //           cell1.appendChild(cellText1);
+  //           cell2.appendChild(cellText2);
+  //           cell3.appendChild(cellText3);
+  //           cell4.appendChild(cellText4);
+  //           row.appendChild(cell1);
+  //           row.appendChild(cell2);
+  //           row.appendChild(cell3);
+  //           row.appendChild(cell4);
+  //           tblBody.appendChild(row);
+  //           tbl.appendChild(tblBody);
+  //           body.appendChild(tbl);
+         
+          
+  //         }})
+
+         function sectionOne(){
+          fetch('https://jsonplaceholder.typicode.com/posts')
+          .then(response => response.json())
+          .then(json=>{
+            let tablebody =document.getElementsByTagName('tbody')[0];
+          for(let n=0;n<json.length;n++){
+            let tr=tablebody.insertRow();
+            let td1 = tr.insertCell(0);
+            let td2 = tr.insertCell(1);
+            let td3 = tr.insertCell(2);
+            let td4 = tr.insertCell(3);
+            td3.width="200"
+            td4.width="400"
+            td1.innerHTML=json[n].userId;
+            td2.innerHTML=json[n].id;
+            td3.innerHTML=json[n].title;
+            td4.innerHTML=json[n].body;
+          }});
+        }
+        var btn=document.getElementById("btn");
+        btn.addEventListener('click',function(){
+          sectionOne();
+        })
+
+        
+        let submit=document.getElementById("submit");
+        submit.addEventListener('click',function(){
+          let userid=document.getElementById("userid").value;
+          let body1=document.getElementById("body1").value;
+          let title1=document.getElementById("title1").value;
+          let spann=document.getElementById("spann")
+          fetch('https://jsonplaceholder.typicode.com/posts', {
+          method: 'POST',
+          body: JSON.stringify({
+          title:title1,
+          body:body1,
+          userId: userid
+          }),
+          headers: {
+            "Content-type": "application/json; charset=UTF-8"
+          }
+        })
+        .then(response => response.json())
+        .then(json =>{
+          spann.style.color='green'
+          spann.innerHTML="Adding new post succeeded"
+        })
+        .catch(err=>{
+          spann.style.color='red'
+          spann.innerHTML="There was an error"
+        })
+        }
+        )
+        let editbtn=document.getElementById("edit");
+        editbtn.addEventListener('click',function(){
+          let id1=document.getElementById("id2").value;
+          let userid=document.getElementById("userid2").value;
+          let body1=document.getElementById("body2").value;
+          let title1=document.getElementById("title2").value;
+          let spann=document.getElementById("spann2")
+          fetch('https://jsonplaceholder.typicode.com/posts/'+id1, {
+          method: 'PUT',
+          body: JSON.stringify({
+          id: id1,
+          title: title1,
+          body: body1,
+          userId: userid
+    }),
+    headers: {
+      "Content-type": "application/json; charset=UTF-8"
+    }
+  })
+      .then(response => response.json())
+      .then(json => { 
+           spann.style.color='green'
+          spann.innerHTML="Changed data of "+id1+"successfully"})
+      .catch(err=>{
+        spann.style.color='red'
+        spann.innerHTML="Changing data of "+id1+"was not successful" 
+        })
+
+        })
+
+
+
+
+   // var text1=document.createTextNode(json[n].userId);
+            // var text2=document.createTextNode(json[n].id);
+            // var text3=document.createTextNode(json[n].title);
+            // var text4=document.createTextNode(json[n].body);
+            // td1.appendChild(text1);
+            // td2.appendChild(text2);
+            // td3.appendChild(text3);
+            // td4.appendChild(text4);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // arr=[],fetch('https://jsonplaceholder.typicode.com/posts')
+        //   .then(response => response.json())
+        //   .then(json=>{for(const key in json){arr.push(json[key]['title'])}})
+        //   console.log(arr);
+          </script> 
+</html>
+
