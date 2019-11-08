@@ -6,12 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
+      body{
+        /* background: steelblue; */
+        background-color: #506474;
+      }
     table,td,th{
-      margin-left: 200px;
+      margin-left: 10px;
       /* border:1px solid black; */
-      border: 1px solid black;
-  border-collapse: collapse;
-  margin-top: 30px;
+      /* border: 1px solid black; */
+      border-collapse: collapse;
+      margin-top: 30px;
+      border-radius: 40px;
+   
+     
+    }
+    td{
+      margin-bottom: 20px;
     }
     th:nth-of-type(1){
       padding: 10px;
@@ -30,12 +40,15 @@
       width:400px;
     }
    #btn{
-     margin-left: 200px;
+     margin-left: 420px;
      margin-top: 10px;
      padding: 10px;
      background-color:steelblue;
      color:wheat;
      border:1px solid cadetblue;
+     border-radius: 20px;
+    width:150px;
+     margin-bottom:40px ;
    } 
    #submit{
      margin-left: 300px;
@@ -45,6 +58,7 @@
      background-color:steelblue;
      color:wheat;
      border:1px solid cadetblue;
+     border-radius: 40px;
    }
    #edit{
      margin-left: 300px;
@@ -54,6 +68,7 @@
      background-color:steelblue;
      color:wheat;
      border:1px solid cadetblue;
+     border-radius: 40px;
    }
    tbody{
      text-align: center;
@@ -67,98 +82,132 @@
     }
     table tr:nth-child(odd) {
     background-color: #fff;
+   
     }
     #getPosts{
-      margin-left: 600px;
+      margin-left: 450px;
       margin-top: 100px;
+      color:white;
+    }
+    #Get-Posts{
+      border:1px solid wheat;
+      margin-left: 100px;
+      margin-top: 30px;
+      border-radius:40px ;
+      margin-bottom: 40px;
+      width:1000px;
+      padding: 20px;
+      background-color: #6f7070;
     }
     #add-data{
-      margin-left: 290px;
+      margin-left: 200px;
       margin-top: 100px;
       width:800px;
       padding: 20px;
-      border: 1px solid black;
+      border: 1px solid wheat;
+      border-radius: 40px;
+      background-color: #6f7070;
     }
 
     #Edit-data{
-      margin-left: 290px;
+      margin-left: 200px;
       margin-top: 100px;
       width:800px;
       padding: 20px;
-      border: 1px solid black;
+      border: 1px solid wheat;
+      border-radius: 40px;
+      background-color: #6f7070;
     }
     #addData{
-      margin-left: 300px;
+      margin-left: 350px;
+      color:white;
     }
     #editData{
-      margin-left: 300px;
+      margin-left: 350px;
+      color:white;
     }
     #userid{
       padding: 10px 0px 10px 10px;
       width:60px;
-      margin-left: 10px;
-      /* margin-left:-130px; */
+   
+      border-radius:40px ;
+margin-left: 200px;
+     
       }
       #id2{
       padding: 10px 0px 10px 10px;
       width:60px;
-      margin-left: 35px;
+      margin-left: 200px;
       margin-bottom: 10px;
+      border-radius:40px ;
       }
       #userid2{
       padding: 10px 0px 10px 10px;
       width:60px;
-      margin-left: 10px;
+      /* margin-left: 10px; */
+      border-radius:40px ;
+      margin-left: 200px;
       }
-      #lab0{
-      padding: 10px;
-      font-size: 20px;
-      margin-left: 230px;
-    }
-    #lab1{
-      padding: 10px;
-      font-size: 20px;
-      margin-left: 220px;
-    }
-    #lab2{
-      font-size: 20px;
-      padding: 0px;
-      margin-left: 240px;
-    }
-    #lab3{
-      font-size: 20px;
-      padding: 10px;
-      margin-top: 100px;
-      margin-left: 243px;
-    }
+    
     #title1{
       width:300px;
       padding: 10px;
-      margin-left: 30px;
+      /* margin-left: 30px; */
       margin-top: 10px;
+      border-radius:40px ;
+      /* float: right; */
     }
     #body1{
-      width:300px;
-      padding: 10px;
+      width:350px;
+      padding: 20px;
       margin-top: 20px;
-      margin-left: -7px;
+      border-radius:40px ;
+     
+      margin-left: 200px;
     }
 
     #title2{
-      width:300px;
+      width:320px;
       padding: 10px;
-      margin-left: 30px;
+      /* margin-left: 30px; */
       margin-top: 10px;
+      border-radius:40px ;
+      margin-left: 200px;
+     
     }
     #body2{
       width:300px;
-      padding: 10px;
+      padding: 20px;
       margin-top: 20px;
-     
+      border-radius:40px ;
+      margin-left: 200px;
+    
+    }
+    .wrapper{
+border: 1px solid wheat;
+width:1200px;
+margin-left: 40px;
+padding-right: 50px;
+border-radius:40px ;
+padding-bottom:20px ;
+background-color: #506474;
+    }
+    #spann{
+text-align: center;
+margin-left: 350px;
+padding-top:200px ;
+
+    }
+    #spann2{
+text-align: center;
+margin-left: 350px;
+padding-top:200px ;
+
     }
     </style>
 </head>
 <body>
+  <div class="wrapper">
   <section id="Get-Posts">
     <h1 id="getPosts">Get Posts</h1>
   <button id="btn">Refresh</button>
@@ -175,21 +224,21 @@
 
  <section id="add-data">
    <h1 id="addData">Add Data</h1>
-  <label for="userid" id="lab1">userId: </label><input type="text" id="userid"><br>
-  <label for="title1" id="lab2">title: </label><input type="text" id="title1"><br>
-  <label for="body1" id="lab3">body : </label><input  type="text" id="body1"><br>
-   <button id="submit">Posts</button> <span id="spann"></span>
+ <input type="text" id="userid" placeholder="userId">
+ <input type="text" id="title1" placeholder="write the title"><br>
+  <input  type="text" id="body1" placeholder="write your post"><br>
+   <button id="submit">Posts</button><br> <br><span id="spann"></span>
  </section>
 
  <section id="Edit-data">
     <h1 id="editData">Edit Data</h1>
-    <label for="id" id="lab0">id : </label><input  type="text" id="id2"><br>
-   <label for="userid" id="lab1">userId : </label><input type="text" id="userid2"><br>
-   <label for="title1" id="lab2">title : </label><input type="text" id="title2"><br>
-   <label for="body1" id="lab3">body : </label><input  type="text" id="body2"><br>
-    <button id="edit">EditPost</button> <span id="spann2"></span>
+    <input  type="text" id="id2" placeholder="Id">
+    <input type="text" id="userid2" placeholder="userId">
+    <input type="text" id="title2" placeholder="Edit the title"><br>
+    <input  type="text" id="body2" placeholder="Edit your post"><br>
+    <button id="edit">EditPost</button><br> <br><span id="spann2"></span>
   </section>
- 
+</div>
 
 </body>
 
@@ -285,6 +334,7 @@
             let td4 = tr.insertCell(3);
             td3.width="200"
             td4.width="400"
+            td1.style.margin="20"
             td1.innerHTML=json[n].userId;
             td2.innerHTML=json[n].id;
             td3.innerHTML=json[n].title;
