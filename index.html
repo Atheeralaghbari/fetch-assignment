@@ -20,6 +20,9 @@
    
      
     }
+    table{
+      display: none;
+    }
     td{
       margin-bottom: 20px;
     }
@@ -49,7 +52,18 @@
      border-radius: 20px;
     width:150px;
      margin-bottom:40px ;
-   } 
+   }
+   #btn2{
+     margin-left: 420px;
+     margin-top: 10px;
+     padding: 10px;
+     background-color:steelblue;
+     color:wheat;
+     border:1px solid cadetblue;
+     border-radius: 20px;
+    width:150px;
+     margin-bottom:40px ;
+   }  
    #submit{
      margin-left: 300px;
      margin-top: 30px;
@@ -211,7 +225,8 @@ padding-top:200px ;
   <section id="Get-Posts">
     <h1 id="getPosts">Get Posts</h1>
   <button id="btn">Refresh</button>
- <table style="border:1">
+  <button id="btn2">Get Posts</button>
+ <table style="border:1" id="mytable">
    <thead>
      <th>userId</th>
      <th>id</th>
@@ -228,6 +243,7 @@ padding-top:200px ;
  <input type="text" id="title1" placeholder="write the title"><br>
   <input  type="text" id="body1" placeholder="write your post"><br>
    <button id="submit">Posts</button><br> <br><span id="spann"></span>
+   
  </section>
 
  <section id="Edit-data">
@@ -334,6 +350,7 @@ padding-top:200px ;
             let td4 = tr.insertCell(3);
             td3.width="200"
             td4.width="400"
+            td4.style.padding='10'
             td1.style.margin="20"
             td1.innerHTML=json[n].userId;
             td2.innerHTML=json[n].id;
@@ -345,7 +362,12 @@ padding-top:200px ;
         btn.addEventListener('click',function(){
           sectionOne();
         })
-
+        let btn2 = document.getElementById('btn2');
+        btn2.addEventListener('click', function() {
+    let tb = document.getElementById('mytable');
+    tb.style.display = "block";
+    sectionOne();
+          })
         
         let submit=document.getElementById("submit");
         submit.addEventListener('click',function(){
